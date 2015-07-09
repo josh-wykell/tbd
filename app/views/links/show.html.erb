@@ -11,7 +11,7 @@
   <div class="col-lg-6">
    <% image_ex = [".jpg", ".png", ".gif", ".jpeg"] %>
           <% if image_ex.any? { |ext| @link.url.include? ext } %>
-              <%= image_tag link.url, :class => "img-responsive", :style => "max-height:70px;" %>
+              <%= image_tag @link.url, :class => "img-responsive", :style => "max-height:70px;" %>
           <% else %>
               <p><%= link_to url_for(@link.url) %></p>
           <% end %>
